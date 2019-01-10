@@ -1,15 +1,18 @@
 {
   "name": "react-webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React application initial boilerplate configured through webpack, using Redux, Sass and Jest.",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "jeffersondesouza",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/jeffersondesouza/react-webpack-boilerplate"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
