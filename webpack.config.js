@@ -4,12 +4,27 @@ const webpack = require('webpack');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const FontelloPlugin = require("fontello-webpack-plugin")
 
 
 const plugins = [];
 
 plugins.push(new cleanWebpackPlugin(['dist']));
+
+plugins.push(
+  new FontelloPlugin({
+    config: require("./fontello.config.json"),
+    fonts:[ "eot", "woff", "woff2", "ttf", "svg" ],
+    name:"icons",
+    output: {
+      css: "[name].css",
+      font: "font/[name].[ext]"
+    },
+    
+  })
+)
 
 plugins.push(new HtmlWebpackPlugin({
   hash: true,
@@ -38,6 +53,10 @@ plugins.push(new webpack.HotModuleReplacementPlugin())
   },
   canPrint: true
 })); */
+
+
+
+
 
 module.exports = {
   entry: './src/index.js',
