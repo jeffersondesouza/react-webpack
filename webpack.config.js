@@ -6,7 +6,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const FontelloPlugin = require("fontello-webpack-plugin")
+const FontelloPlugin = require("fontello-webpack-plugin");
+
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 const plugins = [];
@@ -16,13 +18,13 @@ plugins.push(new cleanWebpackPlugin(['dist']));
 plugins.push(
   new FontelloPlugin({
     config: require("./fontello.config.json"),
-    fonts:[ "eot", "woff", "woff2", "ttf", "svg" ],
-    name:"icons",
+    fonts: ["eot", "woff", "woff2", "ttf", "svg"],
+    name: "icons",
     output: {
       css: "[name].css",
       font: "font/[name].[ext]"
     },
-    
+
   })
 )
 
@@ -44,7 +46,7 @@ plugins.push(
 );
 plugins.push(new webpack.HotModuleReplacementPlugin())
 
-/* plugins.push(new OptimizeCssAssetsWebpackPlugin({
+plugins.push(new OptimizeCssAssetsWebpackPlugin({
   cssProcessor: require('cssnano'),
   cssProcessorOptions: {
     discardComments: {
@@ -52,7 +54,7 @@ plugins.push(new webpack.HotModuleReplacementPlugin())
     }
   },
   canPrint: true
-})); */
+}));
 
 
 
