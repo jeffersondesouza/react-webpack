@@ -1,0 +1,92 @@
+.form {
+  font-size: $font-size-md;
+  @include respond(big-phone) {
+    padding: 0 5rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-action {
+  display: flex;
+  justify-content: center;
+}
+
+.fieldset {
+  border: none;
+  margin-bottom: 3rem;
+}
+
+.legend {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: .5rem 0 .75rem 0;
+  &__subtitle {
+    font-size: $font-size-sm;
+    color: $grey-dark-2;
+  }
+}
+
+.input {
+  outline: 0;
+  background: $grey-light-2;
+  width: 100%;
+  border: 0;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-size: $font-size-md;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .3s;
+  &:focus {
+    border-bottom: 3px solid $primary-color;
+  }
+  &::placeholder {
+    color: rgba($grey-dark, .3);
+  }
+}
+
+.label-explain {
+  display: inline-block;
+}
+
+@keyframes spinner {
+  0% {
+    content: '\f251'
+  }
+  25% {
+    content: '\f251'
+  }
+  50% {
+    content: '\f252'
+  }
+  75% {
+    content: '\f253'
+  }
+  100% {
+    content: '\f254';
+    transform: rotate(360);
+  }
+}
+
+.icon-spinner {
+  transition: all .3s; // animation: spinner 1s infinite;
+  &::before {
+    content: "";
+    animation: spinner 1.5s infinite;
+  }
+}
+
+.icon--danger {
+  color: $red;
+  cursor: pointer;
+  &:hover {
+    color: $red-dark;
+  }
+}
+
+.feedback-error {
+  font-size: $font-size-md;
+  color: $red-dark;
+}

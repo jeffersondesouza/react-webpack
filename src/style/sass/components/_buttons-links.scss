@@ -1,0 +1,65 @@
+.btn {
+  background: $primary-color;
+  border: 0;
+  color: $white;
+  font-size: $font-size-md;
+  font-weight: 600;
+  outline: 0;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  &--block {
+    width: 100%;
+    @include respond(phone) {
+      width: 20rem;
+    }
+  }
+  &--icon-label {
+    input[type=checkbox] {
+      display: none;
+    }
+    [class^="icon-"] {
+      font-size: 2.5rem;
+    }
+  }
+  &--icon {
+    background-color: transparent;
+    font-size: 1rem;
+    padding-left: 0;
+  }
+  &--round {
+    border-radius: 100rem;
+    background-color: $grey-light-2;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    width: 4rem;
+    @include abs-midle-aling;
+    [class^="icon-"] {
+      font-size: 2rem;
+    }
+  }
+  &--edit {
+    background-color: $primary-color;
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+  &--danger {
+    background-color: $red;
+    &:hover {
+      background-color: $red-dark;
+    }
+  }
+  &--add {
+    color: $primary-color !important;
+  }
+  &--remove {
+    color: $red !important;
+    .icon-trash{
+      font-size: 2rem !important;
+
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.register {
+  box-shadow: 0 1px 3px rgba($grey-dark, 1);
+  background: $white;
+  border-radius: 5px;
+  font-size: $font-size-md;
+  margin: 2rem auto 0;
+  min-height: 70vh;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  width: 95%;
+  @include respond(big-phone) {
+    width: 70%;
+  }
+  &__header {
+    background: $primary-color-dark;
+    color: $white;
+    padding: 2rem 0;
+    @include abs-midle-aling;
+  }
+  &__body {
+    padding: 0 1rem;
+  }
+  &__feedback {
+    color: $primary-color;
+    font-size: $font-size-md;
+    padding: .5rem 0;
+    @include abs-midle-aling;
+  }
+  &__feedback--success {
+    color: $primary-color;
+  }
+}

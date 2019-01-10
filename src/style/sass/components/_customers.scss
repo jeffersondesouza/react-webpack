@@ -1,0 +1,91 @@
+.customers-block {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  justify-content: space-between;
+  margin: 0 auto;
+  @include respond(big-phone) {
+    width: 70%;
+  }
+}
+
+.customers {
+  &__item {
+    padding: 2rem 3rem;
+    background-color: $white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 2px 5px $grey-dark-3;
+    border-radius: 3px;
+  }
+  &__expired-icon {
+    font-size: $font-size-sm;
+    color: $red;
+  }
+}
+
+.customer {
+  background-color: $white;
+  box-shadow: 0px 2px 5px $grey-dark-3;
+  border-radius: 3px;
+  padding: 2rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: $font-size-md;
+  display: flex;
+  flex-direction: column;
+  @include respond(phone) {
+    flex-direction: row;
+    padding: 2rem 0 2rem 2rem;
+  }
+  &__info {
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba($secondary-color, .2);
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    font-size: $font-size-sm;
+  }
+  &__title {
+    font-size: $font-size-default;
+    margin-bottom: 1rem;
+  }
+  &__licence {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__licence-icon {
+    margin-right: .5rem;
+    font-size: $font-size-sm;
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contact-header {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contact-phone,
+  &__contact-email,
+  &__contact-location {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+  &__actions {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-around;
+    @include respond(phone) {
+      margin-left: 0;
+      flex-direction: row;
+      flex: 0 0 15rem;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}

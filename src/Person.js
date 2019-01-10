@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Person.scss';
 
 export default class Pesorn extends Component {
 
@@ -38,9 +39,14 @@ export default class Pesorn extends Component {
     return (
       <div>
         This is a Person - {type}
-        <div>name: {name} - age: {age}</div>
+        <div className="name">name: {name} - age: {age}</div>
         <div>id: {id} - valor: {valor} - count: {count}</div>
-        <button onClick={() => this.soma(1, 2)}>Click</button>
+        <button onClick={() => this.soma(1, 2)}>Soma</button>
+        <i className="icon-mail"></i>
+        <div>
+          <img src="https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg"/>
+        </div>
+
 
         <div>
           {JSON.stringify(this.state, null, 2)}
