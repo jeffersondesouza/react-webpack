@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1547154704277" clover="3.2.0">
+  <project timestamp="1547154704277" name="All files">
+    <metrics statements="13" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3" elements="19" coveredelements="11" complexity="0" loc="13" ncloc="13" packages="1" files="2" classes="2">
+      <file name="App.js" path="/home/jefferson/boilerplates/react-webpack/src/App.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="Person.js" path="/home/jefferson/boilerplates/react-webpack/src/Person.js">
+        <metrics statements="11" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+      </file>
+    </metrics>
+  </project>
+</coverage>

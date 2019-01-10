@@ -2,14 +2,8 @@ import './style/sass/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Person from './Person';
+import App from './App';
 
-const title = 'My Minimal React Webpack Babel Setup!!!';
-
-ReactDOM.render(
-  <div>
-    {title}
-    <Person name={'joao'} age={20} />
-  </div>,
+ReactDOM.render( <App />,
   document.getElementById('app')
 );

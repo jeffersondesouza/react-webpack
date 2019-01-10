@@ -4,7 +4,9 @@
   "description": "A React application initial boilerplate configured through webpack, using Redux, Sass and Jest.",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:w": "jest --watch",
+    "test:c": "jest --coverage --colors",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
@@ -15,24 +17,30 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.8",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^3.0.1",
     "fontello-webpack-plugin": "git+https://github.com/sypl/fontello-webpack-plugin.git#35dac8cfd851bc1b3be19fd97e361516a1be6633",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "path": "^0.12.7",
     "react-hot-loader": "^4.6.3",
+    "react-test-renderer": "^16.7.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
@@ -44,5 +52,13 @@
     "fontello-webpack-plugin": "^0.4.8",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "<rootDir>/enzyme.config.js"
+    ]
   }
 }
