@@ -26,6 +26,7 @@ plugins.push(new HtmlWebpackPlugin({
 plugins.push(
   new ExtractTextPlugin("styles.css")
 );
+plugins.push(new webpack.HotModuleReplacementPlugin())
 
 /* plugins.push(new OptimizeCssAssetsWebpackPlugin({
   cssProcessor: require('cssnano'),
@@ -56,5 +57,9 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
-  plugins
+  plugins,
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  }
 };

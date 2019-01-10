@@ -1,20 +1,14 @@
-import Person from './Person';
-
-function sumatorio(a, b) {
-  return a + b;
-}
-
-new Person().soma(1, 2)
-
-console.log('loads')
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import Person from './Person';
 
 const title = 'My Minimal React Webpack Babel Setup!!!';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <div>
+    {title}
+    <Person name={'joao'} age={20} />
+  </div>,
   document.getElementById('app')
 );
