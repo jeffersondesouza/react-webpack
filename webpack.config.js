@@ -116,8 +116,8 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   plugins,
-/*   devServer: {
+  devServer: {
     contentBase: './dist',
     hot: true
-  } */
+  }
 };
