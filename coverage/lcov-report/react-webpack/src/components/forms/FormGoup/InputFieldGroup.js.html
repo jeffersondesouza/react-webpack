@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/11</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -109,23 +109,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,16 +135,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,23 +164,23 @@ export default class InputFieldGroup extends Component {
 &nbsp;
 &nbsp;
   // pure
-  setValue = <span class="fstat-no" title="function not covered" >({</span> name, value, props }) =&gt; {
+  setValue = ({ name, value, props }) =&gt; {
 &nbsp;
-    const replaceStg = <span class="cstat-no" title="statement not covered" >`${props.name}.`;</span>
-    const reg = <span class="cstat-no" title="statement not covered" >new RegExp(replaceStg, 'g');</span>
-    const key = <span class="cstat-no" title="statement not covered" >name.replace(reg, '');</span>
+    const replaceStg = `${props.name}.`;
+    const reg = new RegExp(replaceStg, 'g');
+    const key = name.replace(reg, '');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return {</span>
+    return {
       ...props.values[props.name],
       [key]: value
     };
 &nbsp;
   }
 &nbsp;
-  handleChildChange = <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
-    const { name, value } = <span class="cstat-no" title="statement not covered" >inputEventValue(event);</span>
+  handleChildChange = (event) =&gt; {
+    const { name, value } = inputEventValue(event);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.props.handleChange({</span>
+    this.props.handleChange({
       ...event,
       persist: <span class="fstat-no" title="function not covered" >()</span> =&gt; { },
       target: {
@@ -192,18 +192,18 @@ export default class InputFieldGroup extends Component {
 &nbsp;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  re</span>nder() {
+  render() {
 &nbsp;
-    const { name, values } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+    const { name } = this.props;
 &nbsp;
-    const obj = <span class="cstat-no" title="statement not covered" >Object.keys(this.props.values[name])</span>
-      .map(<span class="fstat-no" title="function not covered" >(k</span>ey) =&gt; (
-<span class="cstat-no" title="statement not covered" >        { [`${name}.${key}`]: this.props.values[name][key] }</span>
+    const obj = Object.keys(this.props.values[name])
+      .map((key) =&gt; (
+        { [`${name}.${key}`]: this.props.values[name][key] }
       ))
-      .reduce(<span class="fstat-no" title="function not covered" >(t</span>, a) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...t, ...a })</span>, {});
+      .reduce((child, actualItem) =&gt; ({ ...child, ...actualItem }), {});
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;React.Fragment&gt;
         {this.props.children &amp;&amp; this.props.children({
           ...this.props,
@@ -220,7 +220,7 @@ export default class InputFieldGroup extends Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 11 2019 08:21:59 GMT-0300 (-03)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 11 2019 11:36:45 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../../../prettify.js"></script>

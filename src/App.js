@@ -33,7 +33,6 @@ export default class App extends Component {
         <h1>Hello world</h1>
         <FormGoup initialValues={values} validate={this.validate} onSubmit={this.handleSubmit}>
           {(formProps) => {
-            console.log('formProps', formProps);
 
             return (
               <Form {...formProps}>

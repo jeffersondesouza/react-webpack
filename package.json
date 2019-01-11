@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest",
+    "test:u": "jest -u",
     "test:w": "jest --watch",
     "test:wv": "jest --watch --verbose",
     "test:c": "jest --coverage --colors",

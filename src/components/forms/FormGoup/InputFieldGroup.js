@@ -35,13 +35,13 @@ export default class InputFieldGroup extends Component {
 
   render() {
 
-    const { name, values } = this.props;
+    const { name } = this.props;
 
     const obj = Object.keys(this.props.values[name])
       .map((key) => (
         { [`${name}.${key}`]: this.props.values[name][key] }
       ))
-      .reduce((t, a) => ({ ...t, ...a }), {});
+      .reduce((child, actualItem) => ({ ...child, ...actualItem }), {});
 
 
     return (

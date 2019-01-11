@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormGroup> when mount the from group and click 2 times on add phone button should add to pohones input to the form 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <label>
+      Email
+    </label>
+    <input
+      className=""
+      name="name"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="text"
+      value="joao"
+    />
+    <div
+      className="error-feedback undefined"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label>
+      Fones
+    </label>
+    <button
+      className="btn--block"
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<FormGroup> when mount the from group and click 2 times on add phone button should add to pohones input to the form 2`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <label>
+      Email
+    </label>
+    <input
+      className=""
+      name="name"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="text"
+      value="joao"
+    />
+    <div
+      className="error-feedback undefined"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label>
+      Fones
+    </label>
+    <button
+      className="btn--block"
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<FormGroup> when mount the from group and click 2 times on add phone button should add to pohones input to the form 3`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <label>
+      Email
+    </label>
+    <input
+      className=""
+      name="name"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="text"
+      value="joao"
+    />
+    <div
+      className="error-feedback undefined"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label>
+      Fones
+    </label>
+    <button
+      className="btn--block"
+      onClick={[Function]}
+      type="button"
+    >
+      +
+    </button>
+  </div>
+</form>
+`;

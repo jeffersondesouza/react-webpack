@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`call handle change inpu had onCanhe event calledomponent 1`] = `
+<input
+  className=""
+  name="name"
+  onBlur={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onChange={[Function]}
+  type="text"
+  value="custom name"
+/>
+`;
+
+exports[`call handle change input onCanhe (Snapshot whitou name param value)  1`] = `
+<input
+  className=""
+  name="name"
+  onBlur={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;

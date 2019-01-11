@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorMessage> should have a error when touched 1`] = `
+<div
+  className="error-feedback undefined"
+/>
+`;
+
+exports[`<ErrorMessage> should have a error when touched 2`] = `
+<div
+  className="error-feedback undefined"
+>
+  Name is Required
+</div>
+`;

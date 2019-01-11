@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputFieldGroup> call handle change inpu had onCanhe event calledomponent 1`] = `
+Array [
+  <input
+    className=""
+    name="name.0"
+    onBlur={[MockFunction]}
+    onChange={[Function]}
+    type="number"
+    value="custom name"
+  />,
+  <input
+    className=""
+    name="name.1"
+    onBlur={[MockFunction]}
+    onChange={[Function]}
+    type="number"
+    value="custom name 2"
+  />,
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    +
+  </button>,
+]
+`;
+
+exports[`<InputFieldGroup> call handle change inpu had onCanhe event calledomponent 2`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  +
+</button>
+`;
