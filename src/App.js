@@ -31,9 +31,14 @@ export default class App extends Component {
 
   }
 
+  handleSubmit = (v)=>{
+    console.log('v', v);
+  }
+  
   render() {
     const { values } = this.state;
-    console.log('Error', ErrorMessage);
+
+
 
     return (
       <div>
@@ -79,6 +84,7 @@ export default class App extends Component {
                     }
                     }
                   </InputFieldArray>
+                  <button>submit</button>
                 </div>
 
 

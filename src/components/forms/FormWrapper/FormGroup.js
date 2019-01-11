@@ -124,7 +124,8 @@ class FormGroup extends Component {
 
 
 FormGroup.propTypes = {
-  initialValues: PropTypes.object.isRequired
+  initialValues: PropTypes.object.isRequired,
+  onSubmit: PropTypes.func.isRequired
 }
 
 export default FormGroup;
