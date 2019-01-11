@@ -17,9 +17,11 @@ class ForceFormContainer extends Component {
     super();
     this.state = {
       values: {
-        emial: 'joao@email.com',
-        name: 'joao',
-        phones: []
+        name: '',
+        mass: '',
+        jedi: '',
+        sith: '',
+        films: []
       }
     }
 
@@ -38,15 +40,34 @@ class ForceFormContainer extends Component {
         {(formProps) =>
           <div className="force-form__block">
             <Form {...formProps} className="force-form__form">
-              <div>
-                <label>Email</label>
+              <div className="form-group">
+                <label>Name</label>
                 <InputField name="name" {...formProps} />
-                <ErrorMessage  {...formProps} name="email" />
+                <ErrorMessage  {...formProps} name="name" />
               </div>
 
               <div className="form-group">
-                <label>Fones</label>
-                <InputFieldArray name="phones" {...formProps} >
+                <label>Mass</label>
+                <InputField name="mass" {...formProps} />
+                <ErrorMessage  {...formProps} name="mass" />
+              </div>
+
+              <div className="form-group">
+                <label>Jedi</label>
+                <InputField name="jedi" type="checkbox" {...formProps} />
+                <ErrorMessage  {...formProps} name="jedi" />
+              </div>
+
+              <div className="form-group">
+                <label>Sith</label>
+                <InputField name="sith" type="checkbox" {...formProps} />
+                <ErrorMessage  {...formProps} name="sith" />
+              </div>
+
+
+              <div className="form-group">
+                <label>Films</label>
+                <InputFieldArray name="films" {...formProps} >
                   {(inputArrayProps) => {
                     const { arrayHelpers, handleAddMore } = inputArrayProps;
 
@@ -55,16 +76,14 @@ class ForceFormContainer extends Component {
                         {
                           arrayHelpers.map((item, i) => (
                             !item[`destroy.${i}`] && <div key={i} >
-                              <InputField {...inputArrayProps} type="number" name={`code.${i}`} values={item} />
-                              <InputField {...inputArrayProps} type="number" name={`number.${i}`} values={item} />
-                              <InputField {...inputArrayProps} type="checkbox" name={`destroy.${i}`} values={item} />
+                              <InputField {...inputArrayProps} name={`title.${i}`} values={item} />
                             </div>
                           ))
                         }
                         <button
                           type="button"
                           className="btn btn--block"
-                          onClick={() => handleAddMore('code', 'number', 'destroy')}>
+                          onClick={() => handleAddMore('title')}>
                           + Add more
                       </button>
                       </Fragment>
@@ -72,10 +91,12 @@ class ForceFormContainer extends Component {
                   }
                   }
                 </InputFieldArray>
-                <button>submit</button>
+                <div>
+                  <button>submit</button>
+                </div>
               </div>
             </Form>
-            <DebugForm {...formProps} className="force-form__debug"/>
+            <DebugForm {...formProps} className="force-form__debug" />
           </div>
         }
       </FormGroup>

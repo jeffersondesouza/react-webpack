@@ -14,7 +14,7 @@ const PeopleList = ({ people }) => (
             Films:
             <ul>
               {
-                person.films.map(film => <span>{film} </span>)
+                person.films.map((film, i) => <span key={i}>{film} </span>)
               }
             </ul>
           </div>
