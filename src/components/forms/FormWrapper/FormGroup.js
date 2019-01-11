@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { inputEventValue } from './utils/InputEventValue';
 
-class FormGoup extends Component {
+class FormGroup extends Component {
 
   initialFormState = {
     touched: {},
@@ -123,8 +123,8 @@ class FormGoup extends Component {
 }
 
 
-FormGoup.propTypes = {
+FormGroup.propTypes = {
   initialValues: PropTypes.object.isRequired
 }
 
-export default FormGoup;
+export default FormGroup;

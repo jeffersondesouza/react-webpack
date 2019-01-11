@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import FormGoup from './forms/FormGoup/FormGoup';
-import Form from './forms/FormGoup/Form';
-import InputFieldGroup from './forms/FormGoup/InputFieldGroup';
-import DebugForm from './forms/FormGoup/DebugForm';
-import InputField from './forms/FormGoup/InputField';
-import ErrorMessage from './forms/FormGoup/ErrorMessage';
+import FormGroup from './forms/FormWrapper/FormGroup';
+import Form from './forms/FormWrapper/Form';
+import InputFieldGroup from './forms/FormWrapper/InputFieldGroup';
+import DebugForm from './forms/FormWrapper/DebugForm';
+import InputField from './forms/FormWrapper/InputField';
+import ErrorMessage from './forms/FormWrapper/ErrorMessage';
 
 export default class Reservation extends Component {
 
@@ -88,7 +88,7 @@ export default class Reservation extends Component {
 
   render() {
     return (
-      <FormGoup initialValues={this.state.values} validate={this.validate} onSubmit={this.handleSubmit}>
+      <FormGroup initialValues={this.state.values} validate={this.validate} onSubmit={this.handleSubmit}>
         {(formProps) => {
 
           return (
@@ -188,7 +188,7 @@ export default class Reservation extends Component {
           )
         }
         }
-      </FormGoup>
+      </FormGroup>
     );
   }
 

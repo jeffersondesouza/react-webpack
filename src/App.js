@@ -2,14 +2,20 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
 import './style/sass/main.scss';
-import FormGoup from './components/forms/FormGoup/FormGoup';
-import Form from './components/forms/FormGoup/Form';
+import Form from './components/forms/FormWrapper/Form';
 import Reservation from './components/Reservation';
-import DebugForm from './components/forms/FormGoup/DebugForm';
-import InputField from './components/forms/FormGoup/InputField';
-import InputFieldArray from './components/forms/FormGoup/InputFieldArray';
 
-import ErrorMessage from './components/forms/FormGoup/ErrorMessage';
+
+
+import {
+  ErrorMessage,
+  DebugForm,
+  InputField,
+  InputFieldArray,
+  FormGroup
+} from './components/forms/FormWrapper';
+
+
 
 
 export default class App extends Component {
@@ -27,11 +33,12 @@ export default class App extends Component {
 
   render() {
     const { values } = this.state;
+    console.log('Error', ErrorMessage);
 
     return (
       <div>
         <h1>Hello world</h1>
-        <FormGoup initialValues={values} validate={this.validate} onSubmit={this.handleSubmit}>
+        <FormGroup initialValues={values} validate={this.validate} onSubmit={this.handleSubmit}>
           {(formProps) => {
 
             return (
@@ -79,7 +86,7 @@ export default class App extends Component {
               </Form>
             )
           }}
-        </FormGoup>
+        </FormGroup>
 
       </div>
     );

@@ -5,16 +5,17 @@ import InputFieldGroup from '../InputFieldGroup';
 import InputField from '../InputField';
 import InputFieldArray from '../InputFieldArray';
 import Form from '../Form';
-import FormGoup from '../FormGoup';
+import FormGroup from '../FormGroup';
 import ErrorMessage from '../ErrorMessage';
 
+ 
 
 describe('<FormGroup>', () => {
 
   const handleSubmit = jest.fn(values, { resetForm });
   const handleBlur = jest.fn(values, { resetForm });
   const resetForm = () => { };
-  const validate = () => ({ name: 'isRequired' });
+  const validate = () => ({});
 
 
   const values = {
@@ -28,7 +29,7 @@ describe('<FormGroup>', () => {
 
   beforeAll(() => {
     form = (
-      <FormGoup
+      <FormGroup
         initialValues={values}
         validate={validate}
         onSubmit={handleSubmit}>
@@ -39,7 +40,7 @@ describe('<FormGroup>', () => {
 
               <div>
                 <label>Email</label>
-                <InputField name="name" {...formProps} />
+                <InputField name="name"  {...formProps} validateOnChange={true} />
                 <ErrorMessage  {...formProps} name="email" />
               </div>
 
@@ -72,7 +73,7 @@ describe('<FormGroup>', () => {
             </Form>
           )
         }}
-      </FormGoup>
+      </FormGroup>
     );
 
 
@@ -91,6 +92,7 @@ describe('<FormGroup>', () => {
       expect(tree).toMatchSnapshot();
       wrapper.find('input').at(0).simulate('blur');
       wrapper.find('input').at(0).simulate('change');
+
       // tree with One phones inputs
       addMoreBtn.simulate('click');
       tree = renderer.create(form).toJSON()
@@ -130,7 +132,7 @@ describe('<FormGroup>', () => {
 
       const resetForm = () => { };
 
-      expect(wrapper.props().onSubmit).not.toHaveBeenCalled();
+      expect(wrapper.props().onSubmit).toHaveBeenCalled();
 
     });
 
