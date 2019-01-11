@@ -8,7 +8,7 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 
 
 const plugins = [];
-const API_BASE_URL = JSON.stringify('https://api.punkapi.com/v2/beers');
+const API_BASE_URL = JSON.stringify('http://localhost:8080');
 
 
 plugins.push(new cleanWebpackPlugin(['dist']));
