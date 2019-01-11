@@ -1,0 +1,11 @@
+.header {
+  margin: 1rem;
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__primary-heading{
+    margin: 0 .5rem;
+  }
+}
