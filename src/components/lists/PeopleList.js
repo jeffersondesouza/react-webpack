@@ -5,7 +5,7 @@ const PeopleList = ({ people }) => (
   <ul>
     {
       people.map(person => (
-        <li>
+        <li key={person.id}>
           <div>name: {person.name}</div>
           <div>mass: {person.mass}</div>
           {person.jedi && <div>jedi: Is as Jedi</div>}
