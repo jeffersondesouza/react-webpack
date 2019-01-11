@@ -43,6 +43,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>Hello world</h1>
+        <i className="icon-rebel"></i>
         <FormGroup initialValues={values} validate={this.validate} onSubmit={this.handleSubmit}>
           {(formProps) => {
 
