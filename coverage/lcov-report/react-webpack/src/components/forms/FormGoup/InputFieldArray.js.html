@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for react-webpack/src/components/forms/FormGoup/InputFieldArray.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">react-webpack/src/components/forms/FormGoup</a> InputFieldArray.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.81% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>5/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.81% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/21</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { inputEventValue } from './utils/InputEventValue';
+&nbsp;
+export default class InputFieldArray extends Component {
+&nbsp;
+  handleArrayChange = <span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {
+    const { name, value } = <span class="cstat-no" title="statement not covered" >inputEventValue(event);</span>
+&nbsp;
+&nbsp;
+    const valueArray = <span class="cstat-no" title="statement not covered" >this.props.values[this.props.name].map(<span class="fstat-no" title="function not covered" >(i</span>tem, i) =&gt; {</span>
+      const key = <span class="cstat-no" title="statement not covered" >name.split('.')[0];</span>
+      const keyIndex = <span class="cstat-no" title="statement not covered" >+name.split('.')[1];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (i === keyIndex) {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+          ...item,
+          [key]: value
+        }
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        ...item,
+      }
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.props.handleChange({</span>
+      ...event,
+      persist: <span class="fstat-no" title="function not covered" >()</span> =&gt; { },
+      target: {
+        ...event.target,
+        name: this.props.name,
+        value: valueArray,
+      }
+    });
+&nbsp;
+  }
+&nbsp;
+  handleAddMore = <span class="fstat-no" title="function not covered" >(.</span>..params) =&gt; {
+&nbsp;
+    const newInstance = <span class="cstat-no" title="statement not covered" >params.map(<span class="fstat-no" title="function not covered" >(p</span>aram) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >        { [param]: '' }</span>
+      ))
+      .reduce(<span class="fstat-no" title="function not covered" >(t</span>, a) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...t, ...a })</span>, {});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.props.handleChange({</span>
+      persist: <span class="fstat-no" title="function not covered" >()</span> =&gt; { },
+      target: {
+        name: this.props.name,
+        value: [...this.props.values[this.props.name], newInstance],
+      }
+    });
+  }
+&nbsp;
+  getArrayHelpers = (props) =&gt; {
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!props) {
+<span class="cstat-no" title="statement not covered" >      return []</span>
+    }
+&nbsp;
+    const { values, name } = this.props;
+&nbsp;
+    return !values[name] ?
+<span class="branch-0 cbranch-no" title="branch not covered" >      []</span>
+      : values[name].map(<span class="fstat-no" title="function not covered" >(i</span>tem, i) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return Object.keys(item)</span>
+          .map(<span class="fstat-no" title="function not covered" >(k</span>ey) =&gt; (
+<span class="cstat-no" title="statement not covered" >            { [`${key}.${i}`]: item[key] }</span>
+          ))
+          .reduce(<span class="fstat-no" title="function not covered" >(t</span>, a) =&gt; (<span class="cstat-no" title="statement not covered" >{ ...t, ...a })</span>, {});
+      });
+&nbsp;
+  }
+&nbsp;
+  render() {
+&nbsp;
+    const props = {
+      ...this.props,
+      arrayHelpers: this.getArrayHelpers(this.props),
+      handleChange: this.handleArrayChange,
+      handleAddMore: this.handleAddMore
+    };
+&nbsp;
+    return (
+      &lt;React.Fragment&gt;
+        {this.props.children &amp;&amp; this.props.children(props)}
+      &lt;/React.Fragment&gt;
+    );
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 11 2019 08:21:59 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

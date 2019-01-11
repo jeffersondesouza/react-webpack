@@ -8,6 +8,7 @@
     "test:w": "jest --watch",
     "test:wv": "jest --watch --verbose",
     "test:c": "jest --coverage --colors",
+    "test:co": "jest --coverage --colors && xdg-open coverage/lcov-report/index.html",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
@@ -53,6 +54,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "fontello-webpack-plugin": "^0.4.8",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
