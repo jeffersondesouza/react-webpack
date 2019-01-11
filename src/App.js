@@ -10,8 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {title}
-        <Person name={'joao'} age={20} />
+        Hello world
       </div>
     );
   }

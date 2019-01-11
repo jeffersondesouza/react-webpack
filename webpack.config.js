@@ -1,19 +1,20 @@
 const path = require('path');
-
 const webpack = require('webpack');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 const FontelloPlugin = require("fontello-webpack-plugin");
-
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 const plugins = [];
+const API_BASE_URL = JSON.stringify('https://api.punkapi.com/v2/beers');
+
 
 plugins.push(new cleanWebpackPlugin(['dist']));
+
+plugins.push(new webpack.DefinePlugin({ API_BASE_URL }));
+
 
 plugins.push(
   new FontelloPlugin({
