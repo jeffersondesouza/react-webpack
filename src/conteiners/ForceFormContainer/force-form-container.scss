@@ -1,0 +1,11 @@
+.force-form {
+  &__block {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  &__form,
+  &__debug {
+    margin: 2rem 2rem;
+  }
+}
