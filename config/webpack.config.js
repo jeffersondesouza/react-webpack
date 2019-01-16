@@ -63,8 +63,8 @@ plugins.push(new OptimizeCssAssetsWebpackPlugin({
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'public/bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'public/bundle.js',
     publicPath: '/'
   },
   module: {
@@ -112,7 +112,6 @@ module.exports = {
   },
   plugins,
   devServer: {
-    contentBase: './dist',
-    hot: true
+    historyApiFallback: true,
   }
 };
