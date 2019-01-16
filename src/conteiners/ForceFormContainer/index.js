@@ -33,7 +33,7 @@ class ForceForm extends Component {
   componentDidMount() {
 
     console.log(this.props);
-    
+    this.props.dispatchLoadBooks();
 
   }
 

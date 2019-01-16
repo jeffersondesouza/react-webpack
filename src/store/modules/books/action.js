@@ -9,6 +9,7 @@ export default class BooksActions {
     }
 
     static loadBooksSuccess(books) {
+        console.log('books:', books)
         return {
             type: Action.LOAD_BOOKS_SUCCESS,
             payload: { books }
