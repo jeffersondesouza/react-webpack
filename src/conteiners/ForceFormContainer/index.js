@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
 
 import './force-form-container.scss';
+
+import BookMidleware from '../../store/modules/books/middleware';
 
 import {
   Form,
@@ -11,7 +14,7 @@ import {
   FormGroup
 } from '../../components/forms/FormWrapper';
 
-class ForceFormContainer extends Component {
+class ForceForm extends Component {
 
   constructor() {
     super();
@@ -24,6 +27,13 @@ class ForceFormContainer extends Component {
         films: []
       }
     }
+
+  }
+
+  componentDidMount() {
+
+    console.log(this.props);
+    
 
   }
 
@@ -97,6 +107,9 @@ class ForceFormContainer extends Component {
               </div>
             </Form>
             <DebugForm {...formProps} className="force-form__debug" />
+            {
+              this.props.books.length
+            }
           </div>
         }
       </FormGroup>
@@ -104,5 +117,20 @@ class ForceFormContainer extends Component {
     )
   }
 }
+
+
+
+
+const mapStateToProps = state => ({
+  ...state.book,
+});
+
+const mapDispatchToProps = dispatch => ({
+  dispatchLoadBooks: () => dispatch(BookMidleware.loadBooksRequest()),
+
+});
+
+
+const ForceFormContainer = connect(mapStateToProps, mapDispatchToProps)(ForceForm);
 
 export default ForceFormContainer;
