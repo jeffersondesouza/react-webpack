@@ -57,10 +57,6 @@ plugins.push(new OptimizeCssAssetsWebpackPlugin({
   canPrint: true
 }));
 
-
-
-
-
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -77,13 +73,10 @@ module.exports = {
       },
       {
         test: /\.scss/,
-        use: [{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }, {
-          loader: "sass-loader" // compiles Sass to CSS
-        }]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!sass-loader'
+        })
       },
       {
         test: /\.css$/,
@@ -105,7 +98,6 @@ module.exports = {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
-
       {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/
         , loader: 'url?limit=100000&name=[name].[ext]'

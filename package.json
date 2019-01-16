@@ -10,8 +10,8 @@
     "test:wv": "jest --watch --verbose",
     "test:c": "jest --coverage --colors",
     "test:co": "jest --coverage --colors && xdg-open coverage/lcov-report/index.html",
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --config ./config/webpack.config.js --mode development",
+    "build": "webpack --mode --config ./config/webpack.config.js production "
   },
   "author": "jeffersondesouza",
   "license": "MIT",
@@ -57,14 +57,17 @@
     "fontello-webpack-plugin": "^0.4.8",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "jest": {
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy"
     },
     "setupFiles": [
-      "<rootDir>/enzyme.config.js",
+      "<rootDir>/config/jest.config.js",
       "jest-context/setup"
     ]
   }
